@@ -1,0 +1,16 @@
+<div>
+    <h1 data-dojo-type="dojox/mobile/Heading"> LOGIN HERE </h1>
+    <ul data-dojo-type="dojox/mobile/RoundRectList">
+
+        <li data-dojo-type="dojox/mobile/ListItem">
+            <label for="userId">Username:</label>
+            <input type="text" id="userId" required="true" data-dojo-type="dojox/mobile/TextBox" placeHolder="username" />
+        </li>
+        <li data-dojo-type="dojox/mobile/ListItem">
+            <label for="pword">Password:</label>
+            <input type="password" id="pword" required="true" data-dojo-type="dojox/mobile/TextBox" placeHolder="password" />
+        </li>
+        <button id="Login" data-dojo-attach-event="onClick:btnClickWelcomeTo" data-dojo-type="dojox/mobile/Button" class="button">Login</button>
+        <button id="SignUp" data-dojo-attach-event="onClick:btnClickToggleLoginSignup" data-dojo-type="dojox/mobile/Button" class="button">SignUp</button>
+    </ul>
+</div>
