@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Trial Application</title>
+    <script type="text/javascript" src="js/conf.js"></script>
+    <script type="text/javascript" src="dojo-1.13.0/dojo/dojo.js"></script>
+    <script type="text/javascript" src="js/loginView.js"></script>
+    <script type="text/javascript" src="js/signupView.js"></script>
+    <script type="text/javascript" src="js/settingsView.js"></script>
+    <script type="text/javascript" src="js/generalView.js"></script>
+    <script type="text/javascript" src="js/aboutView.js"></script>
+    <script type="text/javascript" src="js/events.js"></script>
+    <link rel="stylesheet" href="dojo-1.13.0/dojox/mobile/themes/blackberry/blackberry.css" />
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body style="visibility:hidden">
+
+    <div id="loginView" data-dojo-type="dojox/mobile/View" data-dojo-props="selected:true">
+        <div data-dojo-type="LoginViewAMD"></div>
+    </div>
+
+    <div id="signupView" data-dojo-type="dojox/mobile/View">
+        <div data-dojo-type="SignupViewAMD"></div>
+    </div>
+
+    <div id="settingsView" data-dojo-type="dojox/mobile/View">
+        <div data-dojo-type="SettingsViewAMD"></div>
+    </div>
+
+    <div id="generalView" data-dojo-type="dojox/mobile/View">
+        <div data-dojo-type="GeneralViewAMD"></div>
+    </div>
+
+    <div id="about" data-dojo-type="dojox/mobile/View">
+        <div data-dojo-type="AboutViewAMD"></div>
+    </div>
+</body>
+
+</html>
