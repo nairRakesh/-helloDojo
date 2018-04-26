@@ -2,6 +2,7 @@ require([
     "dojo",
     "dojo/dom",
     "dijit/registry",
+    "dijit/Dialog",
     "dojo/topic",
     "dojo/_base/declare",
     "dijit/_WidgetBase",
@@ -14,17 +15,29 @@ require([
     "dojox/mobile/TextBox",
     "dojox/mobile/Button",
     "dojo/domReady!"
-], function (dojo, dom, registry, topic, declare, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, template) {
+], function (dojo, dom, registry, Dialog, topic, declare, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, template) {
 
+    var myDialog = new Dialog({
+        title: "alert",
+        style: "width: 80%;text-align: center;margin: auto;padding: 20px;border: 3px solid #888;"
+
+    });
 
     function saveAction() {
 
         var newName = dojo.byId("nameId").value;
         var newWord = dojo.byId("pword1").value;
-
-        topic.publish("saveDetailsMoveBack", newName, newWord);
-        dojo.byId("nameId").value = "";
-        dojo.byId("pword1").value = "";
+        if (newName === "") {
+            myDialog.set("content", "Kindly enter a valid username!");
+            myDialog.show();
+        } else if (newWord === "") {
+            myDialog.set("content", "Kindly enter a valid password!");
+            myDialog.show();
+        } else {
+            topic.publish("saveDetailsMoveBack", newName, newWord);
+            dojo.byId("nameId").value = "";
+            dojo.byId("pword1").value = "";
+        }
     }
 
     function cancelAction() {
